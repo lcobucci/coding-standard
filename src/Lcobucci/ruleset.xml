@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+    <description>The coding stardard used by lcobucci's projects.</description>
+
+    <rule ref="Doctrine">
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment.MultiLinePropertyComment" />
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+            <property name="newlinesCountAfterDeclare" value="2"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
+        <properties>
+            <property name="enableEachParameterAndReturnInspection" value="true"/>
+            <property name="traversableTypeHints" type="array" value="Doctrine\Common\Collections\Collection"/>
+            <property
+                    name="usefulAnnotations"
+                    type="array"
+                    value="
+                    @after,
+                    @afterClass,
+                    @AfterFeature,
+                    @AfterMethods,
+                    @AfterScenario,
+                    @AfterStep,
+                    @AfterSuite,
+                    @Attribute,
+                    @Attributes,
+                    @before,
+                    @beforeClass,
+                    @BeforeFeature,
+                    @BeforeMethods,
+                    @BeforeScenario,
+                    @BeforeStep,
+                    @BeforeSuite,
+                    @covers,
+                    @coversDefaultClass,
+                    @coversNothing,
+                    @dataProvider,
+                    @depends,
+                    @deprecated,
+                    @Enum,
+                    @expectedDeprecation,
+                    @expectedException,
+                    @expectedExceptionCode,
+                    @expectedExceptionMessage,
+                    @expectedExceptionMessageRegExp,
+                    @Given,
+                    @group,
+                    @Groups,
+                    @IgnoreAnnotation,
+                    @internal,
+                    @Iterations,
+                    @link,
+                    @ODM\,
+                    @ORM\,
+                    @Required,
+                    @Revs,
+                    @runInSeparateProcess,
+                    @runTestsInSeparalibteProcesses,
+                    @see,
+                    @Serializer\,
+                    @Target,
+                    @test,
+                    @Then,
+                    @throws,
+                    @Transform,
+                    @uses,
+                    @When
+                "
+            />
+        </properties>
+    </rule>
+</ruleset>

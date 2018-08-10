@@ -1,0 +1,19 @@
+{
+    "name": "lcobucci/coding-standard",
+    "type": "phpcodesniffer-standard",
+    "description": "Lcobucci's Coding Standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luís Cobucci",
+            "email": "lcobucci@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "doctrine/coding-standard": "^4.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
