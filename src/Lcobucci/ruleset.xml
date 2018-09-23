@@ -25,63 +25,8 @@
     <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
         <properties>
             <property name="enableEachParameterAndReturnInspection" value="true"/>
+            <property name="allAnnotationsAreUseful" value="true"/>
             <property name="traversableTypeHints" type="array" value="Doctrine\Common\Collections\Collection"/>
-            <property
-                    name="usefulAnnotations"
-                    type="array"
-                    value="
-                    @after,
-                    @afterClass,
-                    @AfterFeature,
-                    @AfterMethods,
-                    @AfterScenario,
-                    @AfterStep,
-                    @AfterSuite,
-                    @Attribute,
-                    @Attributes,
-                    @before,
-                    @beforeClass,
-                    @BeforeFeature,
-                    @BeforeMethods,
-                    @BeforeScenario,
-                    @BeforeStep,
-                    @BeforeSuite,
-                    @covers,
-                    @coversDefaultClass,
-                    @coversNothing,
-                    @dataProvider,
-                    @depends,
-                    @deprecated,
-                    @Enum,
-                    @expectedDeprecation,
-                    @expectedException,
-                    @expectedExceptionCode,
-                    @expectedExceptionMessage,
-                    @expectedExceptionMessageRegExp,
-                    @Given,
-                    @group,
-                    @Groups,
-                    @IgnoreAnnotation,
-                    @internal,
-                    @Iterations,
-                    @link,
-                    @ODM\,
-                    @ORM\,
-                    @Required,
-                    @Revs,
-                    @runInSeparateProcess,
-                    @runTestsInSeparalibteProcesses,
-                    @see,
-                    @Serializer\,
-                    @Target,
-                    @test,
-                    @Then,
-                    @throws,
-                    @Transform,
-                    @uses,
-                    @When
-                "
-            />
         </properties>
     </rule>
 </ruleset>
