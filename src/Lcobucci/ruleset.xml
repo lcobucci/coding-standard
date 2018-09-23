@@ -29,4 +29,25 @@
             <property name="traversableTypeHints" type="array" value="Doctrine\Common\Collections\Collection"/>
         </properties>
     </rule>
+
+    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstContent" value="0"/>
+            <property name="linesCountAfterLastContent" value="0"/>
+            <property name="linesCountBetweenDescriptionAndAnnotations" value="1"/>
+            <property name="linesCountBetweenAnnotationsGroups" value="1"/>
+            <property name="annotationsGroups" type="array">
+                <element value="@internal, @deprecated"/>
+                <element value="@link, @see"/>
+                <element value="@test, @group, @dataProvider, @depends, @doesNotPerformAssertions, @runInSeparateProcess"/>
+                <element value="@expectedDeprecation, @expectedException, @expectedExceptionCode, @expectedExceptionMessage, @expectedExceptionMessageRegExp"/>
+                <element value="@covers, @coversNothing"/>
+                <element value="@uses"/>
+                <element value="@ORM\,@ODM\"/>
+                <element value="@param"/>
+                <element value="@return"/>
+                <element value="@throws"/>
+            </property>
+        </properties>
+    </rule>
 </ruleset>
