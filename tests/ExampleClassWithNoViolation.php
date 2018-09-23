@@ -3,6 +3,10 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+/**
+ * @coversDefaultClass
+ * @runTestsInSeparateProcesses
+ */
 final class ExampleClassWithNoViolation
 {
     /**
@@ -11,6 +15,21 @@ final class ExampleClassWithNoViolation
     private $test = 0;
 
     /**
+     * @internal
+     * @deprecated
+     *
+     * @link
+     * @see Testing =)
+     * @Serializer\Type("string")
+     * @Target
+     * @Then
+     * @throws \Exception When things go very bad.
+     * @Transform
+     * @When
+     *
+     * @ORM\Entity
+     * @ODM\Entity
+     *
      * @after
      * @afterClass
      * @AfterFeature
@@ -27,42 +46,39 @@ final class ExampleClassWithNoViolation
      * @BeforeScenario
      * @BeforeStep
      * @BeforeSuite
-     * @covers
-     * @coversDefaultClass
-     * @coversNothing
+     * @Enum
+     * @Given
+     * @Groups
+     * @IgnoreAnnotation
+     * @Iterations
+     * @Required
+     * @Revs
+     */
+    public function aMethodWithAllUsefulAnnotations(): void
+    {
+        echo $this->test;
+    }
+
+    /**
+     * @test
+     * @group
      * @dataProvider
      * @depends
-     * @deprecated
-     * @Enum
+     * @doesNotPerformAssertions
+     * @runInSeparateProcess
+     *
      * @expectedDeprecation
      * @expectedException
      * @expectedExceptionCode
      * @expectedExceptionMessage
      * @expectedExceptionMessageRegExp
-     * @Given
-     * @group
-     * @Groups
-     * @IgnoreAnnotation
-     * @internal
-     * @Iterations
-     * @link
-     * @ODM\Entity
-     * @ORM\Entity
-     * @Required
-     * @Revs
-     * @runInSeparateProcess
-     * @runTestsInSeparalibteProcesses
-     * @see Testing =)
-     * @Serializer\Type("string")
-     * @Target
-     * @test
-     * @Then
-     * @throws \Exception When things go very bad.
-     * @Transform
+     *
+     * @covers
+     * @coversNothing
+     *
      * @uses
-     * @When
      */
-    public function aMethodWithAllUsefulAnnotations(): void
+    public function sampleForPHPUnitTests(): void
     {
         echo $this->test;
     }
