@@ -4,8 +4,11 @@ declare(strict_types=1);
 namespace Lcobucci;
 
 /**
- * @coversDefaultClass
  * @runTestsInSeparateProcesses
+ *
+ * @coversDefaultClass
+ *
+ * @uses \RuntimeException
  */
 final class ExampleClassWithNoViolation
 {
