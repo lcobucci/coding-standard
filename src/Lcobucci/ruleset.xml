@@ -31,9 +31,9 @@
             <property name="annotationsGroups" type="array">
                 <element value="@internal, @deprecated"/>
                 <element value="@link, @see"/>
-                <element value="@test, @group, @dataProvider, @depends, @doesNotPerformAssertions, @runInSeparateProcess"/>
+                <element value="@test, @group, @dataProvider, @depends, @doesNotPerformAssertions, @runInSeparateProcess, @runTestsInSeparateProcesses"/>
                 <element value="@expectedDeprecation, @expectedException, @expectedExceptionCode, @expectedExceptionMessage, @expectedExceptionMessageRegExp"/>
-                <element value="@covers, @coversNothing"/>
+                <element value="@covers, @coversNothing, @coversDefaultClass"/>
                 <element value="@uses"/>
                 <element value="@ORM\,@ODM\"/>
                 <element value="@param"/>
