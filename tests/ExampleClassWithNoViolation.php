@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use function sprintf;
+use const PHP_EOL;
+
 /**
  * @runTestsInSeparateProcesses
  *
@@ -12,10 +15,7 @@ namespace Lcobucci;
  */
 final class ExampleClassWithNoViolation
 {
-    /**
-     * @var int
-     */
-    private $test = 0;
+    private int $test = 0;
 
     /**
      * @internal
@@ -59,6 +59,7 @@ final class ExampleClassWithNoViolation
      */
     public function aMethodWithAllUsefulAnnotations(): void
     {
+        echo PHP_EOL;
         echo $this->test;
     }
 
@@ -83,6 +84,7 @@ final class ExampleClassWithNoViolation
      */
     public function sampleForPHPUnitTests(): void
     {
+        echo sprintf('Testing %d', 1);
         echo $this->test;
     }
 }
