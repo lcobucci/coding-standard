@@ -3,7 +3,11 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use RuntimeException;
+
+use function count;
 use function sprintf;
+
 use const PHP_EOL;
 
 /**
@@ -11,11 +15,14 @@ use const PHP_EOL;
  *
  * @coversDefaultClass
  *
- * @uses \RuntimeException
+ * @uses RuntimeException
  */
 final class ExampleClassWithNoViolation
 {
     private int $test = 0;
+
+    /** @var list<int> */
+    private array $testing = [];
 
     /**
      * @internal
@@ -61,6 +68,8 @@ final class ExampleClassWithNoViolation
     {
         echo PHP_EOL;
         echo $this->test;
+
+        throw new RuntimeException('Exception class must be properly imported');
     }
 
     /**
@@ -86,5 +95,6 @@ final class ExampleClassWithNoViolation
     {
         echo sprintf('Testing %d', 1);
         echo $this->test;
+        echo count($this->testing);
     }
 }
