@@ -3,3 +3,4 @@
 /.travis.yml    export-ignore
 /*.dist         export-ignore
 /tests          export-ignore
+/composer.lock  export-ignore
