@@ -97,4 +97,9 @@ final class ExampleClassWithNoViolation
         echo $this->test;
         echo count($this->testing);
     }
+
+    /** @test */
+    public function sampleWithOnlyOneAnnotation(): void
+    {
+    }
 }
