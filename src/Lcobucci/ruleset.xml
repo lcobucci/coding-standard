@@ -38,6 +38,7 @@
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
     <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
     <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
+    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter"/>
 
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
         <properties>

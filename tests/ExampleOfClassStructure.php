@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use function var_dump;
+
 /**
  * Order should be:
  *
@@ -41,7 +43,7 @@ class ExampleOfClassStructure
 
     public function __get(string $name): bool
     {
-        return false;
+        return $name === 'foo';
     }
 
     private static function b(): void
@@ -50,7 +52,7 @@ class ExampleOfClassStructure
 
     public function __isset(string $name): bool
     {
-        return false;
+        return $name === 'bar';
     }
 
     final protected function c(): void
@@ -60,5 +62,6 @@ class ExampleOfClassStructure
     /** @param mixed $value */
     public function __set(string $name, $value): void
     {
+        var_dump($name, $value);
     }
 }
