@@ -23,10 +23,12 @@
             <property name="annotationsGroups" type="array">
                 <element value="@internal, @deprecated"/>
                 <element value="@link, @see"/>
-                <element value="@test, @group, @dataProvider, @depends, @doesNotPerformAssertions, @runInSeparateProcess, @runTestsInSeparateProcesses"/>
-                <element value="@expectedDeprecation, @expectedException, @expectedExceptionCode, @expectedExceptionMessage, @expectedExceptionMessageRegExp"/>
+                <element value="@test, @group, @dataProvider, @depends, @doesNotPerformAssertions, @runInSeparateProcess, @runTestsInSeparateProcesses, @before, @beforeClass, @after, @afterClass, @testWith"/>
+                <element value="@testdox"/>
+                <element value="@requires"/>
                 <element value="@covers, @coversNothing, @coversDefaultClass"/>
                 <element value="@uses"/>
+                <element value="@Given, @Then, @When, @Transform, @BeforeSuite, @AfterSuite, @BeforeFeature, @AfterFeature, @BeforeScenario, @AfterScenario, @BeforeStep, @AfterStep"/>
                 <element value="@ORM\,@ODM\"/>
                 <element value="@param"/>
                 <element value="@return"/>
