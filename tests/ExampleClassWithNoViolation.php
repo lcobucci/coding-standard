@@ -79,12 +79,9 @@ final class ExampleClassWithNoViolation
      * @depends
      * @doesNotPerformAssertions
      * @runInSeparateProcess
+     * @testWith [["test", 4]]
      *
-     * @expectedDeprecation
-     * @expectedException
-     * @expectedExceptionCode
-     * @expectedExceptionMessage
-     * @expectedExceptionMessageRegExp
+     * @testdox Super test!
      *
      * @covers
      * @coversNothing
