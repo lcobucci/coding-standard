@@ -1,6 +1,6 @@
 # Coding Standard
 
-[![Build Status](https://img.shields.io/travis/com/lcobucci/coding-standard/master.svg?style=flat-square)](http://travis-ci.com/lcobucci/coding-standard)
+[![Build Status](https://img.shields.io/travis/com/lcobucci/coding-standard/6.0.x.svg?style=flat-square)](http://travis-ci.com/lcobucci/coding-standard)
 [![Total Downloads](https://img.shields.io/packagist/dt/lcobucci/coding-standard.svg?style=flat-square)](https://packagist.org/packages/lcobucci/coding-standard)
 [![Latest Stable Version](https://img.shields.io/packagist/v/lcobucci/coding-standard.svg?style=flat-square)](https://packagist.org/packages/lcobucci/coding-standard)
 

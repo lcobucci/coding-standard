@@ -15,10 +15,5 @@
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "5.0-dev"
-        }
     }
 }

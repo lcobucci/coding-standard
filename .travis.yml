@@ -1,5 +1,5 @@
-dist: trusty
-sudo: false
+os: linux
+dist: focal
 language: php
 
 php:
