@@ -99,4 +99,16 @@ final class ExampleClassWithNoViolation
     public function sampleWithOnlyOneAnnotation(): void
     {
     }
+
+    /**
+     * @template T
+     *
+     * @param class-string<T> $className
+     *
+     * @return T
+     */
+    public function sampleForGenerics(string $className): object
+    {
+        return new $className();
+    }
 }
