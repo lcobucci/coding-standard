@@ -2,7 +2,7 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
 >
-    <description>The coding stardard used by lcobucci's projects.</description>
+    <description>The coding standard used by lcobucci's projects.</description>
 
     <rule ref="Doctrine" />
 
