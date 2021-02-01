@@ -15,5 +15,9 @@
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
