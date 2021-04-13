@@ -26,12 +26,16 @@ class ExampleOfClassStructure
     public int $foo;
     protected string $bar;
     public static int $baz = self::BAZ;
-    private int $qux;
+    private ?int $qux;
+
+    public int|float|null $aNumber;
 
     public function __construct()
     {
         $this->foo = self::FOO;
         $this->qux = self::QUX;
+
+        $this->aNumber = 1;
     }
 
     public function a(): void
@@ -59,8 +63,7 @@ class ExampleOfClassStructure
     {
     }
 
-    /** @param mixed $value */
-    public function __set(string $name, $value): void
+    public function __set(string $name, mixed $value): void
     {
         var_dump($name, $value);
     }
