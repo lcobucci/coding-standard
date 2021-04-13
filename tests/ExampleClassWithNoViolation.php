@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use Exception;
 use RuntimeException;
 
 use function count;
@@ -30,34 +31,37 @@ final class ExampleClassWithNoViolation
      *
      * @link
      * @see Testing =)
-     * @Serializer\Type("string")
-     * @Target
+     *
+     * @before
+     * @beforeClass
+     * @after
+     * @afterClass
+     *
+     * @Given
      * @Then
-     * @throws \Exception When things go very bad.
-     * @Transform
      * @When
+     * @Transform
+     * @BeforeSuite
+     * @AfterSuite
+     * @BeforeFeature
+     * @AfterFeature
+     * @BeforeScenario
+     * @AfterScenario
+     * @BeforeStep
+     * @AfterStep
      *
      * @ORM\Entity
      * @ODM\Entity
      *
-     * @after
-     * @afterClass
-     * @AfterFeature
+     * @throws Exception When things go very bad.
+     *
+     * @Serializer\Type("string")
+     * @Target
      * @AfterMethods
-     * @AfterScenario
-     * @AfterStep
-     * @AfterSuite
      * @Attribute
      * @Attributes
-     * @before
-     * @beforeClass
-     * @BeforeFeature
      * @BeforeMethods
-     * @BeforeScenario
-     * @BeforeStep
-     * @BeforeSuite
      * @Enum
-     * @Given
      * @Groups
      * @IgnoreAnnotation
      * @Iterations
