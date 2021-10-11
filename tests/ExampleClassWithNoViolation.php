@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use ArrayObject;
 use Closure;
 use Exception;
 use RuntimeException;
@@ -160,5 +161,24 @@ final class ExampleClassWithNoViolation
     public function sampleForPsalmAnnotations(Closure $test): object
     {
         return $test();
+    }
+
+    public function sampleForTrailingIf(ArrayObject $collection): void
+    {
+        $collection->append(1);
+        $collection->append(2);
+
+        if (time() === 0) {
+            $collection->append(4);
+        }
+    }
+
+    public function sampleForTrailingOnLoop(ArrayObject $collection): void
+    {
+        foreach ([1, 2, 3, 4, 5, 6] as $value) {
+            if ($value % 2 === 0) {
+                $collection->append($value);
+            }
+        }
     }
 }

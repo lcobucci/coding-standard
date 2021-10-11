@@ -66,4 +66,10 @@
             <property name="nullPosition" value="last" />
         </properties>
     </rule>
+
+    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
+        <properties>
+            <property name="ignoreTrailingIfWithOneInstruction" value="true" />
+        </properties>
+    </rule>
 </ruleset>
