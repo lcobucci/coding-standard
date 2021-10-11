@@ -72,4 +72,6 @@
             <property name="ignoreTrailingIfWithOneInstruction" value="true" />
         </properties>
     </rule>
+
+    <rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
 </ruleset>

@@ -7,6 +7,7 @@ use ArrayObject;
 use Closure;
 use Exception;
 use RuntimeException;
+use Throwable;
 
 use function count;
 use function sprintf;
@@ -179,6 +180,17 @@ final class ExampleClassWithNoViolation
             if ($value % 2 === 0) {
                 $collection->append($value);
             }
+        }
+    }
+
+    public function sampleForNonCapturingCatch(): void
+    {
+        try {
+            $this->incrementAndDecrement();
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+        } catch (Throwable) {
+            // ignore this
         }
     }
 }
