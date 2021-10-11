@@ -8,6 +8,7 @@ use RuntimeException;
 
 use function count;
 use function sprintf;
+use function time;
 
 use const PHP_EOL;
 
@@ -114,5 +115,16 @@ final class ExampleClassWithNoViolation
     public function sampleForGenerics(string $className): object
     {
         return new $className();
+    }
+
+    public function nullSafeOperator(): void
+    {
+        $object = null;
+
+        if (time() === 0) {
+            $object = (object) ['test' => 1];
+        }
+
+        echo $object?->test;
     }
 }
