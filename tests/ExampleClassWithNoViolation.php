@@ -193,4 +193,23 @@ final class ExampleClassWithNoViolation
             // ignore this
         }
     }
+
+    public function sampleForMultiLineDeclaration(
+        int $one,
+        int $two,
+        int $three,
+        int $four,
+    ): void {
+        echo $one + $two + $three + $four;
+    }
+
+    public function sampleFormMultiLineCall(): void
+    {
+        $this->sampleForMultiLineDeclaration(
+            1,
+            2,
+            3,
+            4,
+        );
+    }
 }
