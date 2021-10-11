@@ -34,8 +34,8 @@
                 <element value="@Given, @Then, @When, @Transform, @BeforeSuite, @AfterSuite, @BeforeFeature, @AfterFeature, @BeforeScenario, @AfterScenario, @BeforeStep, @AfterStep"/>
                 <element value="@ORM\,@ODM\"/>
                 <element value="@template"/>
-                <element value="@param"/>
-                <element value="@return"/>
+                <element value="@param, @psalm-param, @phpstan-param"/>
+                <element value="@return, @psalm-return, @phpstan-return"/>
                 <element value="@throws"/>
             </property>
         </properties>

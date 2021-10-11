@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use Closure;
 use Exception;
 use RuntimeException;
 
@@ -135,5 +136,29 @@ final class ExampleClassWithNoViolation
         ++$i;
         $i--;
         --$i;
+    }
+
+    /**
+     * @template T of object
+     *
+     * @phpstan-param Closure():T $test
+     *
+     * @phpstan-return T
+     */
+    public function sampleForPHPStanAnnotations(Closure $test): object
+    {
+        return $test();
+    }
+
+    /**
+     * @template T of object
+     *
+     * @phpstan-param Closure():T $test
+     *
+     * @phpstan-return T
+     */
+    public function sampleForPsalmAnnotations(Closure $test): object
+    {
+        return $test();
     }
 }
