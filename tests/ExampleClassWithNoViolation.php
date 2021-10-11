@@ -3,11 +3,15 @@ declare(strict_types=1);
 
 namespace Lcobucci;
 
+use ArrayObject;
+use Closure;
 use Exception;
 use RuntimeException;
+use Throwable;
 
 use function count;
 use function sprintf;
+use function time;
 
 use const PHP_EOL;
 
@@ -114,5 +118,98 @@ final class ExampleClassWithNoViolation
     public function sampleForGenerics(string $className): object
     {
         return new $className();
+    }
+
+    public function nullSafeOperator(): void
+    {
+        $object = null;
+
+        if (time() === 0) {
+            $object = (object) ['test' => 1];
+        }
+
+        echo $object?->test;
+    }
+
+    public function incrementAndDecrement(): void
+    {
+        $i = 0;
+        $i++;
+        ++$i;
+        $i--;
+        --$i;
+    }
+
+    /**
+     * @template T of object
+     *
+     * @phpstan-param Closure():T $test
+     *
+     * @phpstan-return T
+     */
+    public function sampleForPHPStanAnnotations(Closure $test): object
+    {
+        return $test();
+    }
+
+    /**
+     * @template T of object
+     *
+     * @phpstan-param Closure():T $test
+     *
+     * @phpstan-return T
+     */
+    public function sampleForPsalmAnnotations(Closure $test): object
+    {
+        return $test();
+    }
+
+    public function sampleForTrailingIf(ArrayObject $collection): void
+    {
+        $collection->append(1);
+        $collection->append(2);
+
+        if (time() === 0) {
+            $collection->append(4);
+        }
+    }
+
+    public function sampleForTrailingOnLoop(ArrayObject $collection): void
+    {
+        foreach ([1, 2, 3, 4, 5, 6] as $value) {
+            if ($value % 2 === 0) {
+                $collection->append($value);
+            }
+        }
+    }
+
+    public function sampleForNonCapturingCatch(): void
+    {
+        try {
+            $this->incrementAndDecrement();
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+        } catch (Throwable) {
+            // ignore this
+        }
+    }
+
+    public function sampleForMultiLineDeclaration(
+        int $one,
+        int $two,
+        int $three,
+        int $four,
+    ): void {
+        echo $one + $two + $three + $four;
+    }
+
+    public function sampleFormMultiLineCall(): void
+    {
+        $this->sampleForMultiLineDeclaration(
+            1,
+            2,
+            3,
+            4,
+        );
     }
 }

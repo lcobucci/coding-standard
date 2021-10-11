@@ -23,18 +23,14 @@ class ExampleOfClassStructure
     private const BAZ   = 3;
     protected const QUX = 4;
 
-    public int $foo;
     protected string $bar;
     public static int $baz = self::BAZ;
-    private ?int $qux;
-
     public int|float|null $aNumber;
 
-    public function __construct()
-    {
-        $this->foo = self::FOO;
-        $this->qux = self::QUX;
-
+    public function __construct(
+        public int $foo = self::FOO,
+        private ?int $qux = self::QUX,
+    ) {
         $this->aNumber = 1;
     }
 
