@@ -127,4 +127,13 @@ final class ExampleClassWithNoViolation
 
         echo $object?->test;
     }
+
+    public function incrementAndDecrement(): void
+    {
+        $i = 0;
+        $i++;
+        ++$i;
+        $i--;
+        --$i;
+    }
 }

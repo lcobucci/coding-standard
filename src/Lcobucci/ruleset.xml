@@ -6,6 +6,8 @@
 
     <rule ref="Doctrine" />
 
+    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="declareOnFirstLine" value="false" />
