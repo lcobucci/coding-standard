@@ -1,8 +1,8 @@
 {
     "name": "lcobucci/coding-standard",
-    "type": "phpcodesniffer-standard",
     "description": "Lcobucci's Coding Standard",
     "license": "MIT",
+    "type": "phpcodesniffer-standard",
     "authors": [
         {
             "name": "Luís Cobucci",
