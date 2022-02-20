@@ -17,6 +17,9 @@
         "roave/security-advisories": "dev-master"
     },
     "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
         "preferred-install": "dist",
         "sort-packages": true
     }
