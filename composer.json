@@ -14,7 +14,7 @@
         "doctrine/coding-standard": "^9.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "allow-plugins": {
