@@ -6,8 +6,6 @@
 
     <rule ref="Doctrine" />
 
-    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
-
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="declareOnFirstLine" value="false" />
@@ -41,8 +39,6 @@
         </properties>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator"/>
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment"/>
     <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
     <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
     <rule ref="SlevomatCodingStandard.Functions.UnusedParameter"/>
@@ -51,6 +47,7 @@
         <properties>
             <property name="groups" type="array">
                 <element value="uses"/>
+                <element value="enum cases"/>
                 <element value="public constants, constants"/>
                 <element value="public properties, protected properties, private properties, static properties"/>
                 <element value="constructor"/>
@@ -72,10 +69,4 @@
             <property name="ignoreTrailingIfWithOneInstruction" value="true" />
         </properties>
     </rule>
-
-    <rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
-    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
-
-    <rule ref="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion"/>
 </ruleset>

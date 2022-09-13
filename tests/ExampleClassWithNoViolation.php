@@ -5,9 +5,11 @@ namespace Lcobucci;
 
 use ArrayObject;
 use Closure;
+use Countable;
 use Exception;
 use RuntimeException;
 use Throwable;
+use Traversable;
 
 use function count;
 use function sprintf;
@@ -211,5 +213,21 @@ final class ExampleClassWithNoViolation
             3,
             4,
         );
+    }
+
+    public function sampleUnionAndIntersection(
+        Traversable&Countable $items,
+        int|float|null $value,
+        ?int $shortNullableIsStillAllowed,
+    ): void {
+        echo count($items) + ($value ?? 0);
+
+        foreach ($items as $item) {
+            echo $item;
+        }
+
+        if ($shortNullableIsStillAllowed !== null) {
+            echo $shortNullableIsStillAllowed;
+        }
     }
 }
