@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.1.12",
         "doctrine/coding-standard": "^10.0"
     },
     "require-dev": {
