@@ -18,10 +18,10 @@ class ExampleOfClassStructure
 {
     use RandomTrait;
 
-    private const FOO   = 1;
-    public const BAR    = 2;
-    private const BAZ   = 3;
-    protected const QUX = 4;
+    private const int FOO   = 1;
+    public const int BAR    = 2;
+    private const int BAZ   = 3;
+    protected const int QUX = 4;
 
     protected string $bar;
     public static int $baz = self::BAZ;
